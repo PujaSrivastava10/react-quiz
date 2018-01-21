@@ -4,7 +4,7 @@
 * Change the drive to repective location.
 * Run Command "npm install"
 * Start Json-server to fetch from json file.
-* To start Run Command "json-server --watch db.json --port 3000"
+* To start Run Command "json-server --watch data.json --port 3000"
 
 again,
 * Open new command prompt.
