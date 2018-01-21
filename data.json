@@ -1,0 +1,51 @@
+{"data":[{"name" : "quiz 1",
+  "course_uuid" : "cede100d9c76",
+   "questions" : [{
+                  "question" : "Who is Dennis Ritchie ?",
+                  "option_type" : "mutiple",
+                   "options" : [
+                                ["Scientist",1],
+                                ["Player",0],
+                                ["Reader",0],
+                                ["Programmer",1]
+                              ],
+                   "marks" : "10",
+                   "negativeMarks":"2"
+                 },
+                 {
+                   "question" : "Who is creator of c++ ?",
+                   "option_type" : "single",
+                    "options" : [
+                                ["Bjarne Stroustrup",1],
+                                 ["Sachin tendulkar",0],
+                                 ["Satya nadella",0],
+                                 ["Narendra modi",0]
+                                ],
+                      "marks" : "10",
+                       "negativeMarks":"2"
+                     },
+                     {
+                       "question" : "Java was originally invented by?",
+                       "option_type" : "single",
+                        "options" : [
+                                    ["Oracle",0],
+                                     ["Microsoft",0],
+                                     ["Novell",0],
+                                     ["Sun",1]
+                                    ],
+                          "marks" : "10",
+                          "negativeMarks" : "2"
+                        },
+                         {
+                           "question" : "Web pages are written using ?",
+                           "option_type" : "single",
+                            "options" : [
+                                        ["FTP",0],
+                                         ["HTTP",0],
+                                         ["HTML",1],
+                                         ["URL",0]
+                                        ],
+                              "marks" : "10",
+                              "negativeMarks" : "2"
+                             }]
+}]}
