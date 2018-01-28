@@ -11,7 +11,7 @@ class App extends Component {
     }
   }
   next=()=>{
-    console.log('i m next');
+    //console.log('i m next');
     this.setState({showQuiz:1})
 
 

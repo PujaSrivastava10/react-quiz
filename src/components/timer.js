@@ -54,7 +54,9 @@ export default class Timer extends Component {
        this.props.stop();
     }
   }
-
+  componentWillUnmount(){
+    clearInterval(this.timer);
+  }
 
   render() {
     return(

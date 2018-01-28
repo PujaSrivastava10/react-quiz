@@ -18,13 +18,13 @@ export default class GrabData extends Component {
   }
 
 componentDidMount(){
-    console.log("Did Mount");
+    //console.log("Did Mount");
     fetch('http://localhost:3000/data').then((response)=>{
       return response.json();
     }).then(data=>{
        var renderData=data[0].questions;
        this.setState({renderData:renderData})
-       console.log('renderData',this.state.renderData);
+       ///console.log('renderData',this.state.renderData);
        this.nextQues()
         //this.prevQues(this.state.renderData)
       })
@@ -34,7 +34,7 @@ componentDidMount(){
     var question=this.state.renderData;
     var length=question.length
     var totalMarks=question[0].marks*(question.length-1);
-    console.log('negativeMarks',this.state.renderData[this.state.key].negativeMarks);
+    //console.log('negativeMarks',this.state.renderData[this.state.key].negativeMarks);
 
     var questions=
     <QuesAns ques={this.state.renderData[this.state.key]}
@@ -53,11 +53,11 @@ componentDidMount(){
      if(marksObtained!==0){
        this.setState({correctAns:this.state.correctAns+1});
        var Newmarks=parseInt(marksObtained,10)+this.state.marks;
-       console.log('NewMarks',Newmarks);
+       //console.log('NewMarks',Newmarks);
        this.setState({marks:Newmarks});
      }else{
        var lostMarks=this.state.marks-parseInt(negativemarksObtained,10);
-       console.log('lostMarks',lostMarks);
+       //console.log('lostMarks',lostMarks);
        this.setState({marks:lostMarks});
      }
 
@@ -78,7 +78,7 @@ componentDidMount(){
   TimeOver=()=>{
       this.setState({timeOverForQuiz:true})
       //alert('time over')
-      console.log(this.state.timeOverForQuiz);
+      //console.log(this.state.timeOverForQuiz);
   }
 
    render(){
@@ -95,8 +95,8 @@ componentDidMount(){
                      )
                }
           else if(!this.state.quizOver){
-            console.log('key',this.state.key);
-            console.log('length',this.state.length);
+            //console.log('key',this.state.key);
+            //console.log('length',this.state.length);
            return(
                   <Card>
                   <Row>

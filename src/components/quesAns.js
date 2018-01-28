@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {Form,FormGroup,Label,Input,Row,Col,Card,Button} from 'reactstrap';
+import {Form,FormGroup,Label,Input,Button} from 'reactstrap';
 
 export default class QuesAns extends Component {
   constructor(props) {
@@ -13,25 +13,25 @@ export default class QuesAns extends Component {
   }
   componentDidUpdate(){
      //this.setState(this.baseState);
-     console.log('quesAns componentDidMount');
+     //console.log('quesAns componentDidMount');
   }
   handleOptionChange=(changeEvent)=>{
-     console.log(changeEvent.target.value[changeEvent.target.value.length-1]);
+     //console.log(changeEvent.target.value[changeEvent.target.value.length-1]);
     this.setState({selectedOption:changeEvent.target.value,checked:true,correctOption:changeEvent.target.value[changeEvent.target.value.length-1]});
   }
 
   handleFormSubmit=(formSubmitEvent)=>{
 
     alert("i am submit");
-    console.log('You have selected:', this.state.selectedOption);
+    //console.log('You have selected:', this.state.selectedOption);
 
     formSubmitEvent.preventDefault();
 
   }
      addMarks=()=>{
-           console.log(this.state.correctOption);
+           //console.log(this.state.correctOption);
        if(this.state.correctOption==='1'){
-        console.log('option selected one',this.state.selectedOption);
+        //console.log('option selected one',this.state.selectedOption);
         this.props.submitMarks(this.props.marks,this.props.negativeMarks);
        }
        else if(this.state.correctOption==='0'){
@@ -42,7 +42,7 @@ export default class QuesAns extends Component {
        }
      }
    componentWillReceiveProps(nextProps){
-     console.log('componentWillRecieveProps',nextProps.index,this.props.index);
+     //console.log('componentWillRecieveProps',nextProps.index,this.props.index);
      if(this.props.index!==nextProps.index){
        this.setState({selectedOption:'notSelected',
                       marks:0,
@@ -54,7 +54,7 @@ export default class QuesAns extends Component {
   render(){
     //var count=0
     //console.log('render quesAns',count++);
-    console.log('ques ans data',this.props.data[0]);
+    //console.log('ques ans data',this.props.data[0]);
     return(
          <div>
          <div> Question <span className='.spanning'>{this.props.currentQues}</span> of <span className='.spanning'>{this.props.length}</span> </div>
